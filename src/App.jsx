@@ -18,9 +18,9 @@ const App = () => {
 
     let apiUrl;
     if (!location.trim()) {
-      setData('')
-      setTemperatureCelsius('')
-      setWeatherIcon('')
+      setData("");
+      setTemperatureCelsius("");
+      setWeatherIcon("");
       apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${defaultLocation}&units=metric&appid=b3f2844c90f8839c89b19a3852a95bc6`;
     } else {
       apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=b3f2844c90f8839c89b19a3852a95bc6`;
@@ -46,7 +46,6 @@ const App = () => {
   return (
     <>
       <form>
-        <div className="col-12">
           <input
             type="text"
             placeholder="Enter City"
@@ -78,30 +77,28 @@ const App = () => {
           ) : (
             <h1></h1>
           )}
-          
-            
+
           <div className="title">
             <p className="hwind">Wind</p>
             <p className="hpress">Pressure</p>
             <p className="hhumi">Humidity</p>
           </div>
-            <div className="dis">
-          {data.main ? (
-            <p className="wind">{` ${data.wind.speed} km/hr`}</p>
-          ) : (
-            <h1></h1>
-          )}
-          {data.main && data.main.pressure && (
-            <p className="press">{` ${data.main.pressure} hPa`}</p>
-          )}
-          {data.main ? (
-            <p className="humi">{`${data.main.humidity}%`}</p>
-          ) : (
-            <h1></h1>
-          )}
-    </div>
+          <div className="dis">
+            {data.main ? (
+              <p className="wind">{` ${data.wind.speed} km/hr`}</p>
+            ) : (
+              <h1></h1>
+            )}
+            {data.main && data.main.pressure && (
+              <p className="press">{` ${data.main.pressure} hPa`}</p>
+            )}
+            {data.main ? (
+              <p className="humi">{`${data.main.humidity}%`}</p>
+            ) : (
+              <h1></h1>
+            )}
+          </div>
           <h5 className="date">{`Date: ${currentdate.toDateString()}  `}</h5>
-        </div>
       </form>
     </>
   );

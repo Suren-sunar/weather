@@ -8,19 +8,13 @@ body {
 }
 
 form {
-
+width: 500px;
   background: linear-gradient(to left, rgb(27, 176, 226), rgb(235, 235, 235));
-  margin: auto;
-  margin-top: 50px;
-  width: 80%;
-  max-width: 400px; 
   height: 70vh;
-  padding: 20px; 
+  padding: 4rem 2rem; 
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  position: relative;
- 
-            
+            margin: 0 2rem;
 }
 input {
   width: 100%;
@@ -68,14 +62,14 @@ button:hover {
   color: #070707;
 }
 img{
-   width: "100px";
-    height: "100px";
+   width: 100px;
+    height: 100px;
 }
 
 .date {
     text-align: center;
     margin: auto;
-    margin-top: 20px;
+   padding: 1rem;
 
 }
 .hwind{
@@ -118,10 +112,20 @@ img{
   .date {
     text-align: center;
     margin: auto;
+  padding: 1rem;
   
 
 }
 }
 .title{
  margin: auto;
+}
+div#root {
+  padding: 2rem 0;
+  margin: 0;
+  width: 100%;
+  text-align:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
