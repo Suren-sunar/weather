@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: greenyellow;
+
+  
+}
+
+form {
+
+  background: linear-gradient(to left, rgb(27, 176, 226), rgb(235, 235, 235));
+  margin: auto;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 400px; 
+  height: 70vh;
+  padding: 20px; 
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+ 
+            
+}
+input {
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px; 
+  border: 1px solid #0ea8dc;
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}
+
+button {
+   width: 100%;
+  border-radius: 10px;
+ background-color: #405be1;
+ color: #0a0909;
+ cursor: pointer;
+ font-size: 16px;
+ transition: background-color 0.3s ease;
+}
+img{
+  display: block;
+  margin: auto;
+  height: 6rem;
+  
+}
+h2{
+  text-align: center;
+}
+
+button:hover {
+  background-color: #2e86c1;
+}
+
+.loc {
+  color: rgb(2, 2, 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.temp {
+  color: #070707;
+}
+img{
+   width: "100px";
+    height: "100px";
+}
+
+.date {
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+
+}
+.hwind{
+  
+  display: inline-block;
+  margin-top: 30px;
+  margin-right: px;
+  
+}
+.hpress{
+
+  display: inline-block;
+  margin-top: 30px;
+  margin-right: px;
+  
+}
+.hhumi{
+  display: inline-block;
+  margin-top: 30px;
+  margin-right: px;
+}
+
+
+.dis{
+  display: flex;
+  justify-content: space-between;
+}
+.press{
+  margin-right: 70px;
+}
+.title{
+  display: flex;
+  justify-content: space-between; 
+}
+@media screen and (max-width: 200px) {
+  form {
+    width: 100%;
+
+  }
+  .date {
+    text-align: center;
+    margin: auto;
+  
+
+}
+}
+.title{
+ margin: auto;
+}
