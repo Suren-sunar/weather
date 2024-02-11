@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
-  background: greenyellow;
+  font-family: "Roboto", sans-serif;
+  background:rgb(180, 177, 177);
+  
 
   
 }
@@ -96,13 +98,18 @@ img{
 .dis{
   display: flex;
   justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
 }
 .press{
-  margin-right: 70px;
+  margin-right: 90px;
 }
 .title{
   display: flex;
   justify-content: space-between; 
+  font-size: 20px;
+  font-weight: bold;
+  
 }
 @media screen and (max-width: 200px) {
   form {
