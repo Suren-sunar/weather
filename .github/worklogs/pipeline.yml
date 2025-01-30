@@ -1,42 +1,39 @@
 name: Deploy Private GitHub repository to cPanel
-
 on:
   push:
     branches:
       - master
-
 jobs:
   FTP-Deploy-Action:
-    name: Deploy to cPanel via FTP
+    name: FTP-Deploy-Action
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 2
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
 
-      - name: Clean up old dependencies
-        run: |
-          rm -rf node_modules
-          rm -f package-lock.json
+    - name: Clean up old dependencies
+      run: |
+        rm -rf node_modules
+        rm -f package-lock.json
 
-      - name: Install dependencies
-        run: npm install
+    - name: Install dependencies
+      run: npm install
 
-      - name: Build project
-        run: npm run build
-     
-      - name: Deploy to cPanel via FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /home/surendrasunar/surendra-sunar.com.np/serverftp/
-          local-dir: ./build/
+    - name: Build project
+      run: npm run build
+
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: /home/surendrasunar/surendra-sunar.com.np/serverftp/
+        local-dir: ./build/
