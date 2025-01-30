@@ -3,7 +3,7 @@ name: Deploy Private GitHub repository to cPanel
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   FTP-Deploy-Action:
@@ -34,4 +34,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /home/surendrasunar/surendra-sunar.com.np/serverftp/
-          local-dir: ./build/
+          local-dir: ./build/  
