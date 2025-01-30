@@ -79,7 +79,7 @@ const App = () => {
           )}
 
           <div className="title">
-            <p className="hwind">Wind</p>
+            <p className="hwind">Wind!</p>
             <p className="hpress">Pressure</p>
             <p className="hhumi">Humidity</p>
           </div>
